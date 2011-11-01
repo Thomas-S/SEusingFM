@@ -1,0 +1,17 @@
+hello.pml
+bool.pml
+max.pml
+
+gcd.pml
+sum1.pml
+sum2.pml
+sum.pml
+
+range.pml
+
+interleave.pml
+interleave_set.pml
+spinspider -vp interleave_set_p.pml ; eog interleave_set_p.png
+
+zero.pml
+
