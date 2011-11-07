@@ -11,8 +11,6 @@ do
   ::
   	printf("Philosopher %d is thinking\n", id);
   	
-  	// TODO: Fork id space must be circular!
-  	
   	atomic {
   		!forks[firstFork] && !forks[secondFork];
   		forks[firstFork] = true;
