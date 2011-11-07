@@ -1,3 +1,15 @@
+// ##############################################
+// ############# This is Dining.pml #############
+// ##############################################
+//
+// Open TODOs:
+// - Verify that a single fork cannot be grabbed
+//   at the same time by more than one philosopher
+// - Eliminate deadlocks (if existent) and verify
+//   their absence using assertions
+// - Verify the fork-cannot-be-grabbed-by-more-than-
+//   one-philosopher property using an LTL formula
+
 #define NUM_PHIL 4
 
 // Fork is true <=> it is in use
