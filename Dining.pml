@@ -1,26 +1,39 @@
+// ##############################################
+// ############# This is Dining.pml #############
+// ##############################################
+//
+// Open TODOs:
+// - Verify that a single fork cannot be grabbed
+//   at the same time by more than one philosopher
+// - Eliminate deadlocks (if existent) and verify
+//   their absence using assertions
+// - Verify the fork-cannot-be-grabbed-by-more-than-
+//   one-philosopher property using an LTL formula
+
 #define NUM_PHIL 4
 
 // Fork is true <=> it is in use
-bool forks[5];
+bool forks[NUM_PHIL];
 
 proctype phil(int id) {
+byte firstFork = id;
+byte secondFork = (id == NUM_PHIL-1 -> 0 : firstFork+1);
+
 do 
   ::
   	printf("Philosopher %d is thinking\n", id);
   	
-  	// TODO: Fork id space must be circular!
-  	
   	atomic {
-  		!forks[id] && !forks[id+1];
-  		forks[id] = true;
-  		forks[id+1] = true;
+  		!forks[firstFork] && !forks[secondFork];
+  		forks[firstFork] = true;
+  		forks[secondFork] = true;
   	}
   	
   	printf("Philosopher %d is eating\n", id);
   	
   	atomic {  		
-  		forks[id] = false;
-  		forks[id+1] = false;
+  		forks[firstFork] = false;
+  		forks[secondFork] = false;
   	}
 od
 }
