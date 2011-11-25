@@ -1,0 +1,40 @@
+#####################################
+####### REPORT LAB 1 / Part 2 #######
+#####################################
+####### Authors:              #######
+####### Dominic Scheurer      #######
+####### Thomas Schulz         #######
+#####################################
+
+-------------------------------------
+Task (1)
+-------------------------------------
+
+We implemented Bob as defined by the protocol specification.
+Inline comments are included; variable names have been chosen
+analogously to the Alice process.
+
+-------------------------------------
+Task (2)
+-------------------------------------
+
+Our LTL formula is:
+ltl BOTH_ARE_OK {<> (statusA == ok && statusB == ok)}
+
+The intuition is that eventually both variables are "ok".
+
+-------------------------------------
+Task (3)
+-------------------------------------
+
+The model eventually reaches a state where every process is blocking.
+In the following, we will sum up the end state of all the three
+processes to explain this problem:
+
+Bob:      Blocking at statement "data.key == keyB" because data.key has
+          a zero value (as previously sent by the intruder).
+Intruder: Tries to send data via the rendezvous channel, but no matching
+          receive statement exists
+Alice:    Tries to send data via the rendezvous channel, but no matching
+          receive statement exists
+
