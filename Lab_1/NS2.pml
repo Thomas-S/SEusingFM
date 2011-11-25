@@ -71,5 +71,42 @@ active proctype Alice() {
 }
 
 active proctype Bob() {
-   printf("placeholder for Bob\n")
+  
+  mtype pkey;      /* the other agent's public key                 */
+  mtype pnonce;    /* nonce that we receive from the other agent   */
+  
+  Crypt data;      /* received encrypted message                   */
+  Crypt messageBA; /* our encrypted message to the other party     */
+  
+   
+  pkey = keyA;
+  
+  
+  network ? msg1(agentB,data);
+  
+  /* We proceed only if the key field of the data matches keyB. */
+  data.key == keyB;
+  
+  /* Creating message record */
+  pnonce = data.content2;
+  
+  messageBA.key = pkey;
+  messageBA.content1 = pnonce;
+  messageBA.content2 = nonceB;
+  
+  /* Sending reply to agentA */
+  network ! msg2(agentA,messageBA);
+  
+  /* Receiving third message */
+  network ? msg3(agentB,data);
+  
+  /* We proceed only if the key field of the data matches keyB and the
+     received nonce is the one that we have sent earlier; block
+     otherwise.  */
+  (data.key == keyB) && (data.content1 == nonceB);
+   
+  statusB = ok;
 }
+
+
+ltl BOTH_ARE_OK {<> (statusA == ok && statusB == ok)}
