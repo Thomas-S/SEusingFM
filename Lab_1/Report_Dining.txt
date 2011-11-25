@@ -1,0 +1,39 @@
+#####################################
+####### REPORT LAB 1 / Part 1 #######
+#####################################
+####### Authors:              #######
+####### Dominic Scheurer      #######
+####### Thomas Schulz         #######
+#####################################
+
+Our model of the "dining philosphers problem" ensures that
+
+(i)   each philosopher can only grab and put down the two nearest forks AT ONCE,
+(ii)  each fork cannot be grabbed by more than one philosopher and
+(iii) the philosophers are not blocking each other (deadlock)
+
+by using atomic check, set and unset operations.
+
+-------------------------------------
+Task (1)
+-------------------------------------
+
+We inserted a loop in the critical section (i.e. between acquiring
+and putting down of the forks) of the philosophers process to check
+for each fork i in the byte array "forks" whether the property
+"forks[i] <= 1" holds.
+
+-------------------------------------
+Task (2)
+-------------------------------------
+
+Our model had no deadlocks and we showed this using SPIN.
+
+-------------------------------------
+Task (3)
+-------------------------------------
+
+Our LTL formular "forksME" (standing for "forks mutual exclusion")
+checks, analogously to Task (1), for each fork whether the given
+property "forks[i] <= 1" holds. By doing this, we assume that the
+number of philosophers (and forks) is fixed (= 4).
