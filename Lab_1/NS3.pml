@@ -78,6 +78,7 @@ active proctype Bob() {
   Crypt data;      /* received encrypted message                   */
   Crypt messageBA; /* our encrypted message to the other party     */
   
+  partnerB = agentA;
    
   pkey = keyA;
   
@@ -95,7 +96,7 @@ active proctype Bob() {
   messageBA.content2 = nonceB;
   
   /* Sending reply to agentA */
-  network ! msg2(agentA,messageBA);
+  network ! msg2(partnerB,messageBA);
   
   /* Receiving third message */
   network ? msg3(agentB,data);
