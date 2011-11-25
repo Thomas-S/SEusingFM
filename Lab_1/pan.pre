@@ -1,0 +1,18 @@
+#line 1 "Dining.pml"
+#line 2 "Dining.pml"
+proctype phil(int id) {
+do 
+  ::printf("thinking\n");
+           
+  printf("eating\n");
+           
+od
+}
+init {
+int i = 0; 
+do 
+:: i >= 4 -> break
+:: else -> run phil(i); 
+           i++ 
+od 
+}
