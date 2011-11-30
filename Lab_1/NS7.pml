@@ -1,7 +1,7 @@
 mtype = {ok, err, msg1, msg2, msg3, keyA, keyB, agentA, agentB,
          nonceA, nonceB, agentI, keyI, nonceI };
 
-typedef Crypt { mtype key, content1, content2};
+typedef Crypt { mtype key, content1, content2, content3};
 
 chan network = [0] of {mtype, /* msg# */
                        mtype, /* receiver */
@@ -59,7 +59,8 @@ active proctype Alice() {
      received nonce is the one that we have sent earlier; block
      otherwise.  */
 
-  (data.key == keyA) && (data.content1 == nonceA);
+  /* Task 7) Patch of the protocol by checking that content1 is set to the desired partner */
+  (data.key == keyA) && (data.content1 == partnerA) && (data.content2 == nonceA);
 
   /* Obtain Bob's nonce */
   
@@ -103,8 +104,10 @@ active proctype Bob() {
   pnonce = data.content2;
   
   messageBA.key = pkey;
-  messageBA.content1 = pnonce;
-  messageBA.content2 = nonceB;
+  /* Task 7) Patch of the protocol adding "agentB" to the message */
+  messageBA.content1 = agentB;
+  messageBA.content2 = pnonce;
+  messageBA.content3 = nonceB;
   
   /* Sending reply to agentA */
   network ! msg2(partnerB,messageBA);
