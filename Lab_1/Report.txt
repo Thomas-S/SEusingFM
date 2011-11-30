@@ -97,3 +97,9 @@ We just added a new component to the "Crypt" type ("content3") and modified the 
 of the "msg2" in the B process as well as the acceptance condition in the A process (where we
 check that content1 of the Crypt is set to the actual partner of A) (see inline comments).
 
+-------------------------------------
+Appendix
+-------------------------------------
+
+- Respective error trails for the counter examples
+
