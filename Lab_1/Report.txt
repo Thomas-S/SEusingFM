@@ -38,3 +38,54 @@ Intruder: Tries to send data via the rendezvous channel, but no matching
 Alice:    Tries to send data via the rendezvous channel, but no matching
           receive statement exists
 
+-------------------------------------
+Task (4)
+-------------------------------------
+
+At the beginning of the Alice process, her partner and the corresponding
+public key is chosen randomly between the two options "Bob" and "Intruder"
+using an "if" clause with "true" guards (see inline comments).
+
+-------------------------------------
+Task (5)
+-------------------------------------
+
+We added an additional "if" statement at the "receive branch" of the intruder
+process where we check if the public key is the intruder's own and, if this
+is the case, we do a complete case distinction over all message types and set
+the "knows_nonceX" flags accordingly (see inline comments).
+
+Furthermore, the "send branch" was modified with respect to the newly acquired
+knowledge of the nonces, i.e. we added two cases to the "assemble content1" section
+and introduced a case distinction consisting of four cases when assembling content2.
+
+-------------------------------------
+Task (6)
+-------------------------------------
+
+1. ltl PROP_AB { []((statusA == ok && statusB == ok) -> (partnerA == agentB && partnerB == agentA)) }
+
+   This assumption is violated.
+   The counter example will be sketched below:
+   - A choses I as her partner
+   - A sends a "msg1" to I
+   - I decrypts the message and retrieves the nonce of A
+   - I forwards A's message, encrypted with B's public key, to B
+   - B sends a "msg2" back containing his and A's nonces to I, encrypted with the public key of A
+   - I forwards the unchanged message to A
+   - A sends a "msg3" to I (encrypted with the public key of I), containing B's nonce
+   - At this point, statusA is "ok"
+   - I decrypts the message and retrieves the nonce of B
+   - I forwards A's message, encrypted with B's public key, to B
+   - After receiving this message, statusB is "ok"
+   - The conclusion is wrong, because partnerA is "agentI"
+
+2. ltl PROP_A { []((statusA == ok && partnerA == agentB) -> !knows_nonceA) }
+
+   This assumption is valid.
+
+3. ltl PROP_B { []((statusB == ok && partnerB == agentA) -> !knows_nonceB) }
+
+   This assumption is violated.
+   The counter example of point "1" can be applied here, too.
+
