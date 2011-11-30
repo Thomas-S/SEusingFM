@@ -187,4 +187,7 @@ active proctype Intruder() {
   od
 }
 
+ltl attack1 { (statusA == ok && statusB == ok) -> (partnerA == agentB && partnerB == agentA) }
+ltl attack2 { (statusA == ok && partnerA == agentB) -> !knows_nonceA }
+ltl attack3 { (statusB == ok && partnerB == agentA) -> !knows_nonceB }
 ltl BOTH_ARE_OK {<> (statusA == ok && statusB == ok)}
