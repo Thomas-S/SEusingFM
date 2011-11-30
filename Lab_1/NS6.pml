@@ -123,6 +123,8 @@ active proctype Bob() {
 active proctype Intruder() {
   mtype msg, recpt;
   Crypt data, intercepted;
+  mtype sender, pnonceA, pnonceB;
+  
   do
     :: network ? (msg, _, data) ->
        if /* perhaps store the message */
@@ -136,8 +138,9 @@ active proctype Intruder() {
        if
        	 :: data.key == keyI ->
        	 	if
-       	 		:: (msg == msg1) -> dat
-       	 		::
+       	 		:: (msg == msg1) -> knows_nonceA = true; pnonceA = data.content2;
+       	 		:: (msg == msg2) -> knows_nonceA = true; knows_nonceB = true; pnonceA = data.content1; pnonceB = data.content2;
+       	 		:: (msg == msg3) -> knows_nonceB = true; pnonceB = data.content1;
        	 	fi;
        	 :: else -> skip;
        fi;
@@ -159,6 +162,9 @@ active proctype Intruder() {
             data.content1  = intercepted.content1;
             data.content2  = intercepted.content2;
          :: if /* assemble content1 */
+         	  /* Task 5) change */	
+         	  :: knows_nonceA -> data.content1 = pnonceA;
+         	  :: knows_nonceB -> data.content1 = pnonceB; 
               :: data.content1 = agentA;
               :: data.content1 = agentB;
               :: data.content1 = agentI;
@@ -169,7 +175,12 @@ active proctype Intruder() {
               :: data.key = keyB;
               :: data.key = keyI;
             fi;
-            data.content2 = nonceI;
+            /* Task 5) change */
+            if
+              :: knows_nonceA -> data.content2 = pnonceA;
+         	  :: knows_nonceB -> data.content2 = pnonceB; 
+         	  :: msg == msg3 -> data.content2 = 0;
+			  :: data.content2 = nonceI;
        fi;
       network ! msg (recpt, data);
   od
