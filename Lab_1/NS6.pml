@@ -123,7 +123,7 @@ active proctype Bob() {
 active proctype Intruder() {
   mtype msg, recpt;
   Crypt data, intercepted;
-  mtype sender, pnonceA, pnonceB;
+  mtype pnonceA, pnonceB;
   
   do
     :: network ? (msg, _, data) ->
@@ -187,7 +187,7 @@ active proctype Intruder() {
   od
 }
 
-ltl attack1 { (statusA == ok && statusB == ok) -> (partnerA == agentB && partnerB == agentA) }
-ltl attack2 { (statusA == ok && partnerA == agentB) -> !knows_nonceA }
-ltl attack3 { (statusB == ok && partnerB == agentA) -> !knows_nonceB }
+ltl attack1 { [](statusA == ok && statusB == ok) -> (partnerA == agentB && partnerB == agentA) }
+ltl attack2 { [](statusA == ok && partnerA == agentB) -> !knows_nonceA }
+ltl attack3 { [](statusB == ok && partnerB == agentA) -> !knows_nonceB }
 ltl BOTH_ARE_OK {<> (statusA == ok && statusB == ok)}
