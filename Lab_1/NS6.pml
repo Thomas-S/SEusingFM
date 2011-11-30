@@ -181,8 +181,9 @@ active proctype Intruder() {
          	  :: knows_nonceB -> data.content2 = pnonceB; 
          	  :: msg == msg3 -> data.content2 = 0;
 			  :: data.content2 = nonceI;
+            fi;
        fi;
-      network ! msg (recpt, data);
+       network ! msg (recpt, data);
   od
 }
 
