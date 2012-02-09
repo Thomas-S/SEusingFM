@@ -1,5 +1,5 @@
 \contentsline {chapter}{Disclaimer}{II}{section*.6}
-\contentsline {chapter}{Course Introduction}{III}{section*.9}
+\contentsline {chapter}{Motivation}{III}{section*.9}
 \contentsline {chapter}{\numberline {1}Modeling \& Model Checking with \textsc {Promela} \& \textsc {Spin}}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}PROMELA Introduction}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Verifying with \textsc {Spin}}{2}{section.1.2}
