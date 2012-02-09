@@ -1,11 +1,16 @@
 \documentclass[12pt,accentcolor=tud1b,bibtotoc,colorback,linedtoc,liststotoc,bigchapter,noresetcounter]{tudreport}
 \usepackage[utf8]{inputenc}
 \usepackage{scrtime}
+\usepackage{hyperref}
+\usepackage[printonlyused]{acronym}
  
 \title{Software Engineering using Formal Methods}
 
 \subtitle{Lecture Notes by Thomas Schulz\\
 Last Update: \today \ - \thistime}
+
+\newcommand{\capitals}[1]{\textsc{#1}}
+
 
 \begin{document}
  
@@ -14,8 +19,13 @@ Last Update: \today \ - \thistime}
 \maketitle
 \tableofcontents
 
-\newpage
 
+\begin{acronym}[Promela]
+\setlength{\itemsep}{-\parsep}
+\acro{Promela}{Process Meta-Language}
+\acro{Spin}{Simple Promela Interpreter}
+\acro{JML}{Java Modeling Language}
+\end{acronym}
 
 
 \chapter*{Disclaimer}
@@ -25,7 +35,7 @@ Last Update: \today \ - \thistime}
 \newpage
 
 \chapter*{Course Introduction}
-\addcontentsline{toc}{chapter}{Introduction}
+\addcontentsline{toc}{chapter}{Course Introduction}
 %TODO
 
 \newpage
@@ -34,96 +44,105 @@ Last Update: \today \ - \thistime}
 \pagenumbering{arabic}
 % === %
 
+% ========================
+% 1st Part: Promela & Spin
+% ========================
 
-\chapter{Modeling \& Model Checking with \textsc{Promela} \& $\textsc{Spin}$}
+\chapter{Modeling \& Model Checking with \capitals{Promela} \& \capitals{Spin}}
 
-% === %
+% ==========================
 
 \section{PROMELA Introduction}
-%TODO
+%TODO - create new *.tex file and use \input{*}
 
 \newpage
 
-\section{Verifying with SPIN}
-%TODO
+\section{Verifying with \capitals{Spin}}
+%TODO - create new *.tex file and use \input{*}
 
 \newpage
 
 \section{Modeling Concurrency}
-%TODO
+%TODO - create new *.tex file and use \input{*}
 
 \newpage
 
-\section{Introduction to PROMELA/SPIN}
-%TODO
+\section{Introduction to \capitals{Promela/Spin}}
+%TODO - create new *.tex file and use \input{*}
 
 \newpage
 
 \section{Modeling Distribution}
-%TODO
+%TODO - create new *.tex file and use \input{*}
 
 \newpage
 
 \section{Propositional Logic \& Temporal Logic (1)}
-%TODO
+%TODO - create new *.tex file and use \input{*}
 
 \newpage
 
 \section{Temporal Logic (2)}
-%TODO
+%TODO - create new *.tex file and use \input{*}
 
 \newpage
 
 \section{Channels \& Linear Temporal Logic}
-%TODO
+%TODO - create new *.tex file and use \input{*}
 
 \newpage
 
-\section{Temporal Model Checking with SPIN}
-%TODO
+\section{Temporal Model Checking with \capitals{Spin}}
+%TODO - create new *.tex file and use \input{*}
 
 \newpage
 
 
-\chapter{Modeling \& Verification with JML \& \textsc{KeY}}
+% ===================
+% 2nd Part: JML & KeY
+% ===================
+
+\chapter{Modeling \& Verification with JML \& \capitals{KeY}}
+
+% ==========================
 
 \section{First-Order Logic (Syntax and Semantics)}
-%TODO
+%TODO - create new *.tex file and use \input{*}
 
 \newpage
 
 \section{First-Order Logic -- Calculus}
-%TODO
+%TODO - create new *.tex file and use \input{*}
 
 \newpage
 
 \section{JML (1)}
-%TODO
+%TODO - create new *.tex file and use \input{*}
 
 \newpage
 
 \section{JML (2)}
-%TODO
+%TODO - create new *.tex file and use \input{*}
 
 \newpage
 
 \section{Dynamic Logic 1}
-%TODO
+%TODO - create new *.tex file and use \input{*}
 
 \newpage
 
 \section{Dynamic Logic Calculus}
-%TODO
+%TODO - create new *.tex file and use \input{*}
 
 \newpage
 
 \section{Proof-Obligations}
-%TODO
+%TODO - create new *.tex file and use \input{*}
 
 \newpage
 
 \section{Loop Invariants}
-%TODO
+%TODO - create new *.tex file and use \input{*}
 
 \newpage
  
