@@ -111,7 +111,8 @@ public class Maze {
 		// check if inside maze
 		
 		return newRow >= 0 && newCol >= 0 && 
-			   newRow < maze.length && newCol < maze[newRow].length;
+			   newRow < maze.length && newCol < maze[newRow].length &&
+			   (maze[newRow][newCol] != WALL);
 	}
 
 
