@@ -110,8 +110,9 @@ public class Maze {
       @*/
 	public/* @ pure @ */boolean isPossible(int newRow, int newCol) {
 		// check if inside maze
-		// TO BE IMPLEMENTED
-		throw new RuntimeException();
+		
+		return newRow >= 0 && newCol >= 0 && 
+			   newRow < maze.length && newCol < maze[newRow].length;
 	}
 
 
