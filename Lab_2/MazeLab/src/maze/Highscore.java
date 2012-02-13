@@ -46,6 +46,11 @@ public class Highscore {
 	 * (Hint: make the "if and only if" explicit in your specification and add all 
 	 *  size constraints that adhere to min)
 	 */
+	/*@ public invariant
+	  @   (min >= -1 && min < size) &&
+	  @   (min == -1 <==> size == 0) &&
+	  @   (min != -1 <==> !(\exists int i; i != min && i >= 0 && i < size; highscores[i] < highscores[min]));
+	  @*/
 	protected /*@ spec_public @*/ int min;
 
 
