@@ -110,8 +110,12 @@ public class Maze {
 	public /*@ pure @*/ boolean isPossible(int newRow, int newCol) {
 		// check if inside maze
 		
-		return newRow >= 0 && newCol >= 0 && 
-			   newRow < maze.length && newCol < maze[newRow].length;
+		if (newRow >= 0 && newCol >= 0 && 
+			newRow < maze.length && newCol < maze[newRow].length) {
+			return maze[newRow][newCol] != WALL;
+		} else {
+			return false;
+		}
 	}
 
 
