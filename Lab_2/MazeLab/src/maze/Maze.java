@@ -87,8 +87,7 @@ public class Maze {
       @ ensures \result == (maze[playerRow][playerCol] == EXIT);
       @*/
 	public /*@ pure @*/ boolean won() {
-        // TO BE IMPLEMENTED
-        throw new RuntimeException();
+	    return maze[playerRow][playerCol] == EXIT;
 	}
 
 	/** 
