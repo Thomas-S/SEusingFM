@@ -14,14 +14,29 @@ public class Highscore {
 	 *    <li> the array 'highscores' is not shared with other Highscore instances</li>
 	 *   </ol>  
 	 */
+	//@ public invariant capacity > 0;
 	private /*@ spec_public @*/ final int capacity;
 
+	//@ public invariant size <= capacity && size >= 0;
 	protected /*@ spec_public @*/ int size; 
 
 	/** 
 	 * Hint: the nullable modifier for arrays containing objects means that the field itself 
 	 * can be null as well as the components of the array 
 	 */
+	/*@ public invariant
+	  @   highscores.length <= capacity;
+	  @*/
+	/*@ public invariant
+	  @   highscores == null || 
+	  @   (\forall int i; i >= 0 && i < size; highscores[i] != null);
+	  @*/
+	/*@ public invariant
+	  @   (\forall Highscore h; h == null || h.highscores == null ||
+	  @            (\forall Highscore other;
+	  @                     h.highscores == other.highscores;
+	  @                     h == other));
+	  @*/
 	protected final /*@ spec_public nullable @*/ Record[] highscores;
 
 	/** 
