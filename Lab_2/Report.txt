@@ -1,12 +1,12 @@
+Assignment 2:
+*************
+
 Invariant 1: rectangular maze
 Invariant 2: every field = FREE, WALL or EXIT
 Invariant 3: there is exactly one EXIT
 ------------------------------------------------
 Invariant 4: player is in bounds and there is no
              wall at this position
-
-Assignment 2:
-*************
 
 Part 4)
 =======
@@ -24,3 +24,12 @@ This method modifies playerRow and playerCol which explicitly occur in Invariant
 Part 5)
 =======
 The only fields which occur in invariant formulas are "maze", "playerRow" and "playerCol". Hence, only methods which modify these fields can potentially violate an invariant. The method "move()" is the only non-pure function which assigns "playerRow" and "playerCol". Therefore, it may violate Invariant 4.
+
+
+Assignment 3:
+*************
+
+Part 2)
+=======
+
+a) As the "pure"-modifiers are already inserted, we do not have to amend anything.
