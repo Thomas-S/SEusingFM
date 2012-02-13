@@ -33,3 +33,5 @@ Part 2)
 =======
 
 a) As the "pure"-modifiers are already inserted, we do not have to amend anything.
+
+c) iii) using invariant to specify that "min" is correct

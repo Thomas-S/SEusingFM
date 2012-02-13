@@ -138,7 +138,22 @@ public class Highscore {
           @ ensures size == \old(size) + 1;
 	  @ assignable min, size, highscores[*];
 	  @
-	  @ // add here the missing specification cases
+	  @ also
+	  @
+	  @ public normal_behavior
+	  @ requires size >= capacity;
+	  @ requires rec.score <= min;
+          @ ensures \result == \old(rec);
+	  @ assignable \nothing;
+	  @
+	  @ also
+	  @
+	  @ public normal_behavior
+	  @ requires size >= capacity;
+	  @ requires rec.score > min;
+	  @ ensures \result = \old(rec);
+	  @ ensures highscores[\old(min)] == \old(rec);
+	  @ assignable min, highscores[\old(min)];
 	  @*/
 	public /*@ nullable @*/ Record add(Record rec) {
 		if (size < capacity) {
