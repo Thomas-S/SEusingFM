@@ -28,15 +28,15 @@ public class Highscore {
 	  @   highscores.length <= capacity;
 	  @*/
 	/*@ public invariant
-	  @   highscores == null || 
 	  @   (\forall int i; i >= 0 && i < size; highscores[i] != null);
 	  @*/
 	/*@ public invariant
-	  @   (\forall Highscore h; h == null || h.highscores == null ||
+	  @   (\forall Highscore h; h == null ||
 	  @            (\forall Highscore other;
 	  @                     h.highscores == other.highscores;
 	  @                     h == other));
 	  @*/
+	//@ public invariant highscores != null;
 	protected final /*@ spec_public nullable @*/ Record[] highscores;
 
 	/** 
