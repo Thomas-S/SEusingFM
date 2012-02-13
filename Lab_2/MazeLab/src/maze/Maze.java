@@ -108,7 +108,7 @@ public class Maze {
       @              newRow < maze.length && newCol < maze[newRow].length);	                      
       @    ensures !\result;
       @*/
-	public/* @ pure @ */boolean isPossible(int newRow, int newCol) {
+	public /*@ pure @*/ boolean isPossible(int newRow, int newCol) {
 		// check if inside maze
 		
 		return newRow >= 0 && newCol >= 0 && 
