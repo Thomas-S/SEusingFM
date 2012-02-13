@@ -87,8 +87,8 @@ public class Maze {
       @ ensures \result == (maze[playerRow][playerCol] == EXIT);
       @*/
 	public /*@ pure @*/ boolean won() {
-                // TO BE IMPLEMENTED
-                throw new RuntimeException();
+        // TO BE IMPLEMENTED
+        throw new RuntimeException();
 	}
 
 	/** 
@@ -108,10 +108,10 @@ public class Maze {
       @              newRow < maze.length && newCol < maze[newRow].length);	                      
       @    ensures !\result;
       @*/
-	public /*@ pure @*/ boolean isPossible(int newRow, int newCol) {
+	public/* @ pure @ */boolean isPossible(int newRow, int newCol) {
 		// check if inside maze
-                // TO BE IMPLEMENTED
-                throw new RuntimeException();
+		// TO BE IMPLEMENTED
+		throw new RuntimeException();
 	}
 
 
