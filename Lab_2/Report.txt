@@ -1,0 +1,26 @@
+Invariant 1: rectangular maze
+Invariant 2: every field = FREE, WALL or EXIT
+Invariant 3: there is exactly one EXIT
+------------------------------------------------
+Invariant 4: player is in bounds and there is no
+             wall at this position
+
+Assignment 2:
+*************
+
+Part 4)
+=======
+
+won(): No.
+Because we have a pure method, fields cannot be modified. Hence, invariants cannot be affected.
+
+isPossible(): No.
+As before, we have a pure method.
+
+move(): Yes.
+This method modifies playerRow and playerCol which explicitly occur in Invariant 4. Therefore it can be useful to verify that the invariant is preserved.
+
+
+Part 5)
+=======
+The only fields which occur in invariant formulas are "maze", "playerRow" and "playerCol". Hence, only methods which modify these fields can potentially violate an invariant. The method "move()" is the only non-pure function which assigns "playerRow" and "playerCol". Therefore, it may violate Invariant 4.
