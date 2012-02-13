@@ -144,6 +144,12 @@ public class Maze {
       @                            (direction == MOVE_LEFT ? -1 : direction == MOVE_RIGHT ? 1 : 0));
       @    ensures !\result;              
       @	 assignable \nothing;
+      @
+      @ also
+      @
+      @ public exceptional_behavior
+      @   requires direction < 0 || direction > 3;
+      @   assignable \nothing;
       @*/
 	public boolean move(int direction) {
 		int newRow = playerRow;
