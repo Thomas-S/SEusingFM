@@ -14,7 +14,7 @@ public class Highscore {
 	 *    <li> the array 'highscores' is not shared with other Highscore instances</li>
 	 *   </ol>  
 	 */
-	//@ public invariant capacity > 0;
+	//@ public invariant capacity > 0 && capacity <= highscores.length;
 	private /*@ spec_public @*/ final int capacity;
 
 	//@ public invariant size <= capacity && size >= 0;
@@ -49,7 +49,7 @@ public class Highscore {
 	/*@ public invariant
 	  @   (min >= -1 && min < size) &&
 	  @   (min == -1 <==> size == 0) &&
-	  @   (min != -1 <==> !(\exists int i; i != min && i >= 0 && i < size; highscores[i] < highscores[min]));
+	  @   (min != -1 <==> !(\exists int i; i != min && i >= 0 && i < size; highscores[i].score < highscores[min].score));
 	  @*/
 	protected /*@ spec_public @*/ int min;
 
