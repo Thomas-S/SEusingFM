@@ -150,7 +150,7 @@ public class Highscore {
 	  @
 	  @ public normal_behavior
 	  @ requires size >= capacity;
-	  @ requires rec.score > min;
+	  @ requires rec.score > highscores[min];
 	  @ ensures \result = \old(rec);
 	  @ ensures highscores[\old(min)] == \old(rec);
 	  @ assignable min, highscores[\old(min)];
