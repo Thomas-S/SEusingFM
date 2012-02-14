@@ -14,7 +14,7 @@ public class Highscore {
 	 *    <li> the array 'highscores' is not shared with other Highscore instances</li>
 	 *   </ol>  
 	 */
-	//@ public invariant capacity > 0 && capacity <= highscores.length;
+	//@ public invariant capacity > 0 && capacity == highscores.length;
 	private /*@ spec_public @*/ final int capacity;
 
 	//@ public invariant size <= capacity && size >= 0;
@@ -142,7 +142,8 @@ public class Highscore {
 	  @
 	  @ public normal_behavior
 	  @ requires size >= capacity;
-	  @ requires rec.score <= min;
+	  @ requires rec != highscores[min];
+	  @ requires rec.score <= highscores[min].score;
           @ ensures \result == \old(rec);
 	  @ assignable \nothing;
 	  @
@@ -150,10 +151,10 @@ public class Highscore {
 	  @
 	  @ public normal_behavior
 	  @ requires size >= capacity;
-	  @ requires rec.score > highscores[min];
-	  @ ensures \result = \old(rec);
+	  @ requires rec.score > highscores[min].score;
+	  @ ensures \result == highscores[\old(min)];
 	  @ ensures highscores[\old(min)] == \old(rec);
-	  @ assignable min, highscores[\old(min)];
+	  @ assignable min, highscores[*];
 	  @*/
 	public /*@ nullable @*/ Record add(Record rec) {
 		if (size < capacity) {
