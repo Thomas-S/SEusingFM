@@ -23,6 +23,15 @@ public class HighscoreSorted extends Highscore {
 	/** 
 	 * returns an index with a maximal score or <tt>-1</tt> if the high score list is empty
 	 */
+	/*@ public normal_behavior
+	  @ requires size > 0;
+	  @ ensures \forall int i; highscores[i] <= highscores[\result];
+	  @
+	  @ also
+	  @
+	  @ requires size = 0;
+	  @ ensures \result == -1;
+	  @*/
 	public int max() {
 		// to be implemented
 		throw new RuntimeException("To be implemented.");
