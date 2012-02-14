@@ -47,7 +47,19 @@ public class HighscoreSorted extends Highscore {
 	  @ ensures (\forall int i; i>at && i<in.length; in[i] == \old(in[i-1])); 
 	  @ assignable in[at..in.length];
 	  @
-	  @ // fill in the missing exceptional specification cases
+	  @ also
+	  @
+	  @ private exceptional_behavior
+	  @ requires in == null;
+	  @ signals_only NullPointerException;
+	  @ assignable \nothing;
+	  @
+	  @ also
+	  @
+	  @ private exceptional_behavior
+	  @ requires in != null && (at < 0 || at >= in.length);
+	  @ signals_only IndexOutOfBoundsException;
+	  @ assignable \nothing;
 	  @*/
 	private void insertAt(/*@ nullable @*/ Record rec, int at, /*@ nullable @*/ Record[] in) {
 		if (in == null) {
