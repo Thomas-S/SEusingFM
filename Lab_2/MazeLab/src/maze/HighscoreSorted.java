@@ -25,12 +25,12 @@ public class HighscoreSorted extends Highscore {
 	 */
 	/*@ public normal_behavior
 	  @ requires size > 0;
-	  @ ensures \forall int i; highscores[i].score <= highscores[\result].score;
+	  @ ensures (\forall int i; i >= 0 && i < size; highscores[i].score <= highscores[\result].score);
 	  @
 	  @ also
 	  @
 	  @ public normal_behavior
-	  @ requires size = 0;
+	  @ requires size == 0;
 	  @ ensures \result == -1;
 	  @*/
 	public /*@ pure @*/ int max() {
