@@ -64,7 +64,7 @@ public class HighscoreSorted extends Highscore {
 	private void insertAt(/*@ nullable @*/ Record rec, int at, /*@ nullable @*/ Record[] in) {
 		if (in == null) {
 			throw new NullPointerException();
-		} 
+		}
 		if (at < 0 || at >= in.length) {
 			throw new IndexOutOfBoundsException();
 		}
@@ -73,7 +73,7 @@ public class HighscoreSorted extends Highscore {
 		
 		// in the specification below complete the specification by replacing the placeholders YYY and ZZZ
 		// do not forget to uncomment (remove the double slashes) 
-		/*@ loop_invariant start >= at && start < in.length && (\forall int i; i>start && i<in.length; in[i] == \old(in[i-1]));  
+		/*@ loop_invariant in != null && start >= at && start < in.length && (\forall int i; i > start && i < in.length; in[i] == \old(in[i-1]));  
 		  @ assignable in[at+1..in.length-1], start;
 		  @ decreases start;
 		  @*/
