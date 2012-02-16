@@ -154,6 +154,7 @@ public class Maze {
       @ public exceptional_behavior
       @   requires direction < 0 || direction > 3;
       @   assignable \nothing;
+      @   signals_only IllegalArgumentException;
       @*/
 	public boolean move(int direction) {
 		int newRow = playerRow;

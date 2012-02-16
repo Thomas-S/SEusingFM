@@ -1,6 +1,6 @@
 \settings {
 "#Proof-Settings-Config-File
-#Wed Feb 15 10:19:18 CET 2012
+#Thu Feb 16 16:35:58 CET 2012
 [SimultaneousUpdateSimplifier]DeleteEffectLessLocations=true
 [DecisionProcedure]showSMTResDialog=false
 [StrategyProperty]QUANTIFIERS_OPTIONS_KEY=QUANTIFIERS_NON_SPLITTING_WITH_PROGS
@@ -46,7 +46,7 @@
 "
 }
 
-\javaSource "C:\\Users\\dome\\UNI\\WS_11_12\\SEFM\\SEFM_Git\\Lab_2\\MazeLab\\src\\maze";
+\javaSource "C:\\Users\\dome\\UNI\\WS_11_12\\SEFM\\SEFM_Git\\Lab_2\\MazeLab";
 
 
 
@@ -54,8 +54,8 @@
 java.lang.Throwable exc;
 maze.Maze self;
 int _direction;
-int newCol;
 int direction;
+int newCol;
 int _newRow;
 int _newCol;
 int newRow;
@@ -63,11 +63,17 @@ boolean result;
 }
 
 \functions {
+jint playerRow_0(maze.Maze);
 \nonRigid[LocationNoHeap] jint playerColAtPre_0(maze.Maze);
 \nonRigid[LocationNoHeap] jint playerRowAtPre_0(maze.Maze);
+jint playerCol_0(maze.Maze);
+\nonRigid[LocationNoHeap] maze.Maze selfAtPre_0;
 }
 
 \predicates {
+\nonRigid[HeapDependent]  anonHeapPred;
+\nonRigid[HeapDependent]  anonHeapPred_1;
+\nonRigid[HeapDependent]  anonHeapPred_0;
 }
 
 \problem {
@@ -179,7 +185,7 @@ boolean result;
 \proof {
 (keyLog "0" (keyUser "dome" ) (keyVersion "90bb886cd7b78027c8f6703803461f09e5699bb9"))
 
-(autoModeTime "5226")
+(autoModeTime "4992")
 
 (branch "dummy ID"
 (rule "inInt" (formula "1") (term "1,0,0,1,0,0,0,0,0,0,1,0,0,0,0"))
