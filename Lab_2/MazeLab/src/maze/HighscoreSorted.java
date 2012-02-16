@@ -73,7 +73,9 @@ public class HighscoreSorted extends Highscore {
 		
 		// in the specification below complete the specification by replacing the placeholders YYY and ZZZ
 		// do not forget to uncomment (remove the double slashes) 
-		/*@ loop_invariant in != null && start >= at && start < in.length && (\forall int i; i > start && i < in.length; in[i] == \old(in[i-1]));  
+		/*@ loop_invariant start >= at && start < in.length &&
+		  @   (\forall int i; i > start && i < in.length && i > at && i > 0; in[i] == \old(in[i-1])) &&
+		  @   (\forall int i; i > at && i <= start; in[i] == \old(in[i]));    
 		  @ assignable in[at+1..in.length-1], start;
 		  @ decreases start;
 		  @*/
