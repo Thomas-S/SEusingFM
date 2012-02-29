@@ -1,0 +1,24 @@
+Defects in Software can cause (financially) \emph{severe} and \emph{omnipresent} failures. Unfortunately, best practices known from other engineering disciplines are not adaptable to developing software (see Table \ref{T:HwSw}).
+
+\begin{table}[h]
+\centering
+\caption{Hardware vs.\ Software}
+\label{T:HwSw}
+
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Best Practices for Hardware} & \textbf{Why not for Software?} \\
+\hline
+\emph{Redundancy} & Does not help against bugs! \\
+\emph{Separation of Subsystems} & Usually not (completely) possible! \\
+\emph{Precise Calculation} & Software is too complex! \\
+\emph{Follow patterns} & No mature methods in SE! \\
+\emph{Robust Design} & Local Errors often affect the whole system! \\
+\hline
+\end{tabular}
+\end{table}
+
+One possible approach is to test a software product, but this shows only the \emph{presence} of errors, not their \emph{absence}. Besides, testing is always incomplete, expensive and time consuming.\\
+
+This motivates the topic of the lecture. Formal methods provide tools to verify correctness and completeness. The idea for both parts of this course is to provide a specification of a system, provide a specification of the requirements and (semi-)automatically check whether the specification meets the requirements.\\
+The first part discusses an approach for concurrent processes while the second part adresses object-oriented programs.
