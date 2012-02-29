@@ -24,14 +24,3 @@ This method modifies playerRow and playerCol which explicitly occur in Invariant
 Part 5)
 =======
 The only fields which occur in invariant formulas are "maze", "playerRow" and "playerCol". Hence, only methods which modify these fields can potentially violate an invariant. The method "move()" is the only non-pure function which assigns "playerRow" and "playerCol". Therefore, it may violate Invariant 4.
-
-
-Assignment 3:
-*************
-
-Part 2)
-=======
-
-a) As the "pure"-modifiers are already inserted, we do not have to amend anything.
-
-c) iii) using invariant to specify that "min" is correct
