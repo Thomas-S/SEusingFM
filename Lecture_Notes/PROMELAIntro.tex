@@ -1,0 +1,16 @@
+\begin{itemize}
+\item put variable declarations at start
+\item non-initialized arithmetic variables are set to 0
+\item the values $\mathbb B = \{\texttt{true,false}\}$ are syntactic sugar for the bit values 1 and 0
+\item there is at most one \texttt{mtype} \emph{(message type)} per program
+\item first statement after ``\texttt{::}'' is considered as the \emph{guard}
+\item if more than one guard is true, then one is randomly chosen
+\item use ``\texttt{->}'' after command that starts with ``\texttt{::}'', not ``\texttt{;}''
+\item \emph{blocking} occurs if no guard is true
+\item feel free to declare constants with ``\texttt{\#define C val}''
+\item there are two possibilities to express a for-loop
+\begin{enumerate}
+\item ``\texttt{for (i : 1 .. 6)}'' iterates over \texttt{i} from 1 to 6
+\item ``\texttt{for (i in a)}'' iterates over all indices \texttt{i} of array \texttt{a}
+\end{enumerate}
+\end{itemize}
