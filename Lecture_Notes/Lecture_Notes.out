@@ -19,3 +19,8 @@
 \BOOKMARK [1][-]{section.2.6}{Dynamic Logic Calculus}{chapter.2}% 19
 \BOOKMARK [1][-]{section.2.7}{Proof-Obligations}{chapter.2}% 20
 \BOOKMARK [1][-]{section.2.8}{Loop Invariants}{chapter.2}% 21
+\BOOKMARK [0][-]{chapter.3}{FAQ}{}% 22
+\BOOKMARK [1][-]{section.3.1}{[Promela] What are the exact semantics of ``atomic'' and ``d\137step''?}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.2}{What is the difference between ``starvation'', ``livelock'' and ``deadlock''?}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.3}{[Promela] How do the statement types relate to their executability?}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.4}{[LTL] What is the meaning of ``''? How is this meaning justified?}{chapter.3}% 26
