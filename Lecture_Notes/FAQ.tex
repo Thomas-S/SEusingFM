@@ -1,11 +1,11 @@
 \section{\capitals{[Promela]} What are the exact semantics of ``\texttt{atomic}'' and ``\texttt{d\_step}''?}
-The keyword ``\texttt{atomic}'' describes a \emph{weakly}, the keyword ``\texttt{d\_step}'' a \emph{strongly} atomic sequence. The difference lies in the interruption condition: The first can \emph{only} be interrupted if a statement is not executable while the second cannot be interrupted \emph{at all} (see Slide 21 in ``Concurrent Programming'').
+The keyword ``\texttt{atomic}'' describes a \emph{weakly}, the keyword ``\texttt{d\_step}'' a \emph{strongly} atomic sequence. The difference lies in the interruption condition: The first can \emph{only} be interrupted if a statement is not executable while the second cannot be interrupted \emph{at all} (see slide 21 in ``Concurrent Programming'').
 
-\section{What is the difference between ``starvation'', ``livelock'' and ``deadlock''?}
+\section{[General] What is the difference between ``deadlock'', ``livelock'' and ``starvation''?}
 Processes are in a \emph{deadlock}, if each process waits for an event that only other processes can trigger. A \emph{livelock} is a concrete deadlock where two or more processes are not waiting, but are trapped in a loop and cannot complete their task. \emph{Starvation} describes the state of a process that is waiting for an event that does not occur.
 
 \section{\capitals{[Promela]} How do the statement types relate to their executability?}
-Table \ref{T:Exec} illustrates the answer (see Slide 28 in ``Distributed Programming'').
+Table \ref{T:Exec} illustrates the answer (see slide 28 in ``Distributed Programming'').
 \begin{table}[h]
 \centering
 \caption{Executability of Statements}
@@ -25,5 +25,19 @@ Table \ref{T:Exec} illustrates the answer (see Slide 28 in ``Distributed Program
 \end{tabular}
 \end{table}
 
-\section{[LTL] What is the meaning of ``$\Box\Diamond\phi$''? How is this meaning justified?}
-(see Slide 25 in ``LTL (1)'')
+\section{[LTL] What is the meaning of ``$\Box\Diamond\phi$''? How is this justified?}
+(see slide 25 in ``LTL (1)'')
+
+\section{[LTL] How are ``$\Box$'' and ``$\Diamond$'' related? What is the intuition?}
+
+\section{[JML] How can \texttt{($\backslash$forall $\tau$ x; a; b)} and \texttt{($\backslash$exists $\tau$ x; a; b)} be translated?}
+According to slide 34 in ``JML (1)'', the first statement is equivalent to an \emph{implication}, \texttt{($\backslash$forall $\tau$ x; a {\bf==>} b)}, while the second expression has the same semantics as a \emph{conjunction}, \texttt{($\backslash$exists $\tau$ x; a {\bf\&\&} b)}
+
+\section{[JML] Is ``\texttt{/$*$@ non\_null @$*$/}'' always the opposite of ``\texttt{/$*$@ nullable @$*$/}''?}
+No! If an array is specified as \texttt{/$*$@ nullable @$*$/}, then the array itself may be a null pointer or the \emph{elements} of this array can be null. On the other hand, if an array is declared as \texttt{/$*$@ non\_null @$*$/}, then neither the array nor its elements are null (see slide 30 in ``JML (2)'').
+
+\section{[JML] Is ``\texttt{/$*$@ pure @$*$/}'' and ``\texttt{/$*$@ assignable $\backslash$nothing @$*$/}'' the same?}
+No! The scope of \texttt{/$*$@ assignable $\backslash$nothing @$*$/} is \emph{local} to each specification case of a method. Specifying a method as \texttt{/$*$@ pure @$*$/} is a \emph{global} statement and also prohibits non-terminationand exceptions (see slide 8 in ``Proof Obligations'').
+
+\section{[DL-Calculus] Why there are three steps in the ``\textsf{loopInvariant}''-rule?}
+First, the case \emph{initially valid} proves that the loop invariant holds prior to the loop execution. Second, the step \emph{preserved} ... . Third, the \emph{use case} ... (see slides 7 ff.\ in ``Loop Invariants'').

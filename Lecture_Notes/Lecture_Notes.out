@@ -21,6 +21,11 @@
 \BOOKMARK [1][-]{section.2.8}{Loop Invariants}{chapter.2}% 21
 \BOOKMARK [0][-]{chapter.3}{FAQ}{}% 22
 \BOOKMARK [1][-]{section.3.1}{[Promela] What are the exact semantics of ``atomic'' and ``d\137step''?}{chapter.3}% 23
-\BOOKMARK [1][-]{section.3.2}{What is the difference between ``starvation'', ``livelock'' and ``deadlock''?}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.2}{[General] What is the difference between ``deadlock'', ``livelock'' and ``starvation''?}{chapter.3}% 24
 \BOOKMARK [1][-]{section.3.3}{[Promela] How do the statement types relate to their executability?}{chapter.3}% 25
-\BOOKMARK [1][-]{section.3.4}{[LTL] What is the meaning of ``''? How is this meaning justified?}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.4}{[LTL] What is the meaning of ``''? How is this justified?}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.5}{[LTL] How are ``'' and ``'' related? What is the intuition?}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.6}{[JML] How can \("026E30F forall \040x; a; b\) and \("026E30F exists \040x; a; b\) be translated?}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.7}{[JML] Is ``/*@ non\137null @*/'' always the opposite of ``/*@ nullable @*/''?}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.8}{[JML] Is ``/*@ pure @*/'' and ``/*@ assignable "026E30F nothing @*/'' the same?}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.9}{[DL-Calculus] Why there are three steps in the ``loopInvariant''-rule?}{chapter.3}% 31

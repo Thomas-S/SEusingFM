@@ -21,7 +21,12 @@
 \contentsline {section}{\numberline {2.8}Loop Invariants}{17}{section.2.8}
 \contentsline {chapter}{\numberline {3}FAQ}{18}{chapter.3}
 \contentsline {section}{\numberline {3.1}\textsc {[Promela]} What are the exact semantics of ``\texttt {atomic}'' and ``\texttt {d\_step}''?}{18}{section.3.1}
-\contentsline {section}{\numberline {3.2}What is the difference between ``starvation'', ``livelock'' and ``deadlock''?}{18}{section.3.2}
+\contentsline {section}{\numberline {3.2}[General] What is the difference between ``deadlock'', ``livelock'' and ``starvation''?}{18}{section.3.2}
 \contentsline {section}{\numberline {3.3}\textsc {[Promela]} How do the statement types relate to their executability?}{18}{section.3.3}
-\contentsline {section}{\numberline {3.4}[LTL] What is the meaning of ``$\Box \Diamond \phi $''? How is this meaning justified?}{18}{section.3.4}
+\contentsline {section}{\numberline {3.4}[LTL] What is the meaning of ``$\Box \Diamond \phi $''? How is this justified?}{18}{section.3.4}
+\contentsline {section}{\numberline {3.5}[LTL] How are ``$\Box $'' and ``$\Diamond $'' related? What is the intuition?}{18}{section.3.5}
+\contentsline {section}{\numberline {3.6}[JML] How can \texttt {($\delimiter "026E30F $forall $\tau $ x; a; b)} and \texttt {($\delimiter "026E30F $exists $\tau $ x; a; b)} be translated?}{19}{section.3.6}
+\contentsline {section}{\numberline {3.7}[JML] Is ``\texttt {/$*$@ non\_null @$*$/}'' always the opposite of ``\texttt {/$*$@ nullable @$*$/}''?}{19}{section.3.7}
+\contentsline {section}{\numberline {3.8}[JML] Is ``\texttt {/$*$@ pure @$*$/}'' and ``\texttt {/$*$@ assignable $\delimiter "026E30F $nothing @$*$/}'' the same?}{19}{section.3.8}
+\contentsline {section}{\numberline {3.9}[DL-Calculus] Why there are three steps in the ``\textsf {loopInvariant}''-rule?}{19}{section.3.9}
 \contentsfinish 
