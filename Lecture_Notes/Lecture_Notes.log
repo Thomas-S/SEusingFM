@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2011.12.20)  2 MAR 2012 16:18
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2011.12.20)  8 MAR 2012 15:12
 entering extended mode
 **D:/eclipse/workspace/SEusingFM/Lecture_Notes/Lecture_Notes.tex
 (D:/eclipse/workspace/SEusingFM/Lecture_Notes/Lecture_Notes.tex
@@ -1201,7 +1201,7 @@ LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 (Font)              scaled to size 6.89998pt on input line 23.
 \@TUD@titlelines=\count121
- <tud_logo.pdf, id=127, 157.58875pt x 63.23625pt>
+ <tud_logo.pdf, id=135, 157.58875pt x 63.23625pt>
 File: tud_logo.pdf Graphic file (type pdf)
  <use tud_logo.pdf>
 Package pdftex.def Info: tud_logo.pdf used on input line 23.
@@ -1231,19 +1231,19 @@ LaTeX Font Info:    Font shape `T1/5fp/b/n' in size <12> not available
 [1
 
 
-] (D:\eclipse\workspace\SEusingFM\Lecture_Notes\Disclaimer.tex
+] [2] (D:\eclipse\workspace\SEusingFM\Lecture_Notes\Disclaimer.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
 
-) [2
+) [3
 
 ] (D:\eclipse\workspace\SEusingFM\Lecture_Notes\Motivation.tex
 Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-) [3
+) [4
 
 ]
 Chapter 1.
@@ -1533,26 +1533,55 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 39.
 
+) [19]
+Chapter 4.
+(D:\eclipse\workspace\SEusingFM\Lecture_Notes\Test.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--3
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 163.
- [19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 163.
- (D:\eclipse\workspace\SEusingFM\Lecture_Notes\Lecture_Notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 163.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 163.
+Underfull \hbox (badness 10000) in paragraph at lines 8--164
+
+ []
+
+[20
+
+]
+Chapter 5.
+(D:\eclipse\workspace\SEusingFM\Lecture_Notes\Pitfalls.tex)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 171.
+ [21
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 171.
+
+(D:\eclipse\workspace\SEusingFM\Lecture_Notes\Lecture_Notes.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 171.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 171.
 Package rerunfilecheck Info: File `Lecture_Notes.out' has not changed.
-(rerunfilecheck)             Checksum: 7ED895C950C1CF97B9F2EC51A03A06F5;2608.
+(rerunfilecheck)             Checksum: 0768CCB3A38827E1AF62A5EFD2A086BA;2694.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 11175 strings out of 494045
- 170742 string characters out of 3148383
- 281720 words of memory out of 3000000
- 14117 multiletter control sequences out of 15000+200000
- 142535 words of font info for 150 fonts, out of 3000000 for 9000
+ 11198 strings out of 494045
+ 171151 string characters out of 3148383
+ 283719 words of memory out of 3000000
+ 14126 multiletter control sequences out of 15000+200000
+ 148113 words of font info for 154 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  59i,12n,75p,448b,493s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/texnansi.enc}{C:/Progra
@@ -1569,9 +1598,9 @@ design/mdbch/md-chr7y.pfb><C:/Users/Thomas/AppData/Roaming/MiKTeX/2.9/fonts/typ
 e1/mathdesign/mdbch/md-chri7m.pfb><C:/Users/Thomas/AppData/Roaming/MiKTeX/2.9/f
 onts/type1/mathdesign/mdbch/md-chrma.pfb><C:/Users/Thomas/AppData/Roaming/MiKTe
 X/2.9/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on Lecture_Notes.pdf (23 pages, 161899 bytes).
+Output written on Lecture_Notes.pdf (26 pages, 172402 bytes).
 PDF statistics:
- 344 PDF objects out of 1000 (max. 8388607)
- 63 named destinations out of 1000 (max. 500000)
- 266 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 370 PDF objects out of 1000 (max. 8388607)
+ 68 named destinations out of 1000 (max. 500000)
+ 282 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,12 @@
+\begin{itemize}
+\item initialize correctly in \capitals{Promela}
+\item carefully read the task's assumptions
+\item ``infinite monkey theorem'' is not applicable
+\item do not use \texttt{(b == true)}, but \texttt{(b)}
+\item do not forget \texttt{/*@ spec\_public @*/} declarations
+\item the correct order is \texttt{/*@ spec\_public pure @*/}
+\item when checking array equality, do not forget to show that reference \emph{and} element equality is preserved
+\item do not forget \texttt{/*@ public normal\_behavior @*/} and  \texttt{/*@ also @*/}
+\item $\phi \mathcal U\psi$ is only true iff ???
+\item do not forget \texttt{endxxx}-labels to mark desirable (possibly infinite) loops to avoid invalid end states
+\end{itemize}

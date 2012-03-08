@@ -1,0 +1,20 @@
+Für $b \in \{\alpha Q \backslash \alpha P\}$ und $c \in \{\alpha P \cap \alpha Q\}$ gilt die Gleichung:\\
+$(c \to P) \ || \ (b \to Q) = b \to ((c \to P) \ || \ Q)$\\
+
+Intuitiv ist $c$ ein Ereignis, dass nur durch gleichzeitiges Ausführen der Prozesse $P$ und $Q$ möglich ist, während das Ereignis $b$ nur im Prozess $Q$ ablaufen kann.\\
+
+Die Gleichung stimmt deshalb, weil $b$ erst den Prozess $Q$ anstoßen muss damit $c$, welches das gleichzeitige Ausführen von $P$ und $Q$ erfordert, ausgeführt werden kann. Mittels Umformung sollte dies zu zeigen sein. Du solltest auch nochmal Deine Herleitung der Gleichheit der Alphabete überprüfen (angesichts der Bedingungen über die Variablen).\\
+
+Die Äquivalenz der Spuren kann wie folgt durch Umformung gezeigt werden:\\
+nach Definition von $||$:\\
+$\texttt{traces}(P \ || \ Q) = $\\$\{ t \in (\alpha P \cup \alpha Q)^* \ | \ (t \uparrow (\alpha P)) \in \texttt{traces}(P) \ \land \ (t \uparrow (\alpha Q)) \in \texttt{traces}(Q) \}$\\
+nach Definition von $\to$:\\
+$\texttt{traces}(x \to P) = \{ () \} \cup \{ (x).t \ | \ t \in \texttt{traces}(P)\}$\\
+linke Seite (1. Glied):\\
+$\texttt{traces}(c \to P) = \{ () \} \cup \{ (c).t \ | \ t \in \texttt{traces}(P)\}$\\
+linke Seite (2. Glied):\\
+$\texttt{traces}(b \to Q) = \{ () \} \cup \{ (b).t \ | \ t \in \texttt{traces}(Q)\}$\\
+linke Seite:\\
+$\texttt{traces}((c \to P) \ || \ (b \to Q)) = $\\
+rechte Seite:\\
+$\texttt{traces}(b \to ((c \to P) \ || \ Q) = $\\
